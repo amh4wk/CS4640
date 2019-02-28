@@ -4,31 +4,65 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Schedule4Me</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" /> 
+	<link rel="stylesheet" type="text/css" href="signin.css">
 
 </head>	
 <body>
 	<div id="banner">
 		<nav class="navbar navbar-expand-md">
 			<a class="navbar-brand" href="#">Schedule4Me</a>
-			<p> Hello </p>
 
 		</nav>
 	</div>
 
 	<div class="jumbotron">
+
 		<div class="row">
-			<div class="col-md-5">
-				<h2>Easily schedule your next four years at UVA using Schedule4Me!</h2>
+			<div id="description" class="col-sm-6">
+				<div id="dsctext">
+					<h2>Easily schedule your next four years at UVA using Schedule4Me!</h2>
+				</div>
 			</div>
-			<div class="col-md-5">
+
+			<div id="login" class="col-sm-6">
 				<form>
-					
+					<div class="w3-container">
+						<h2>Log in:</h2>
+						<label for="username">Username:</label>
+						<input type="text">
+						<div id="lower">
+							<label for="password">Password:</label>
+							<input type="text">
+						</div>
+						<button type="button">Log in</button>
+					</div>
+				</form>
+
+
+				<form>
+					<div class="w3-container">
+						<h2>Create Account:</h2>
+						<label for="computingid" align=left>Computing ID:</label>
+						<input type="text">
+
+						<div id="lower">
+							<label for="createpassword" align="left">Password:</label>
+							<input type="text">
+						</div>
+						<div id="lower">
+							<label for="confirmpass" align="left">Confirm password:</label>
+							<input type="text">
+						</div>
+						<button type="button">Create Account</button>
+					</div>
 				</form>
 			</div>
 		</div>
+		
 
 	</div>
+
 
 </body>
 
