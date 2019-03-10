@@ -15,61 +15,66 @@
     	}
     	.right{
     		float:right;
-    		background-color: green;
+    		
     	}
 
     	.searchbar {
     		padding-left: 400px;
     	}
 
-    	td{
-    		padding:25px;
-    	}
-    	table th, td {
-		    width: 200px;
-		    height:70px;
-		    text-align: center;
-		    border: 1px solid black;
-	
-		}
-		/*
-    	table{
-		    display:block;
-
-		    border: 1px solid black;
-		    //color: fff;
-		    height: 30px;
-		    width: 100%;
-		}*/
 		.sched_row{
 			width:100%;
+		}
+
+		.drop-row{
+			height: 200px;
+		}
+
+		.req{
+			color:white;
 		}
 
     	@media screen and (min-width:377px){
     		.left{
     			height: 100%;
-    			width:30%;
+    			width:20%;
     			padding-left: 20px;
     			padding-top: 20px;
-    			background-color: blue;
+    			background-color: navy;
     		}
     		.right{
-    			width: 70%;
+    			width: 80%;
     			height: 100%;
     		}
     	
     		.searchbar {
+    			padding-top: 20px;
 	    		padding-left: 450px;
 	    	}
 
 	    	.main-right{
-	    		padding-top: 150px;
+	    		padding-top: 60px;
 	    	}
 
 	    	.select-course{
-	    		width:14%;
-	    		background-color: yellow;
+	    		padding-left: 10px;
+	    		width:12%;
+	    		height: 100%;
+	    	
+	    		text-align: center;
 	    	}
+
+	    	td{
+    		padding:25px;
+	    	}
+	    	table th, td {
+			    width: 200px;
+			    height:30px;
+			    text-align: center;
+			    border: 1px solid black;
+		
+			}
+	    	
     		
     	}
 	</style>
@@ -106,13 +111,18 @@
         </div>  
       </nav>
 
-	<div class = "left">
-        <div class ="general-req">
-          <p>CLAS Requirements</p>
+	<div class = "left" style="color:white;">
+        <div class ="general-req" >
+          <p><u>CLAS Requirements</u></p>
           <form class= "check" action="/action_page.php">
-            <input type="checkbox" name="req"> Foreign Language Requirement<br>
+            <input type="checkbox" class="req"> Foreign Language Requirement<br>
             <input type="checkbox" name="req"> First Writing Requirement<br>
             <input type="checkbox" name="req"> Second Writing Requirement<br><br>
+            <input type="checkbox" name="req"> Social Sciences<br>
+            <input type="checkbox" name="req"> Humanities<br>
+            <input type="checkbox" name="req"> Historical Studies<br>
+            <input type="checkbox" name="req"> Non-Western Perspective<br>
+            <input type="checkbox" name="req"> Natural Science and Mathematics<br>
           </form>
 
         </div>
@@ -124,22 +134,27 @@
         <br>
 
         <div class ="major-req">
-          <p>Major: Computer Science</p>
+          <p><u>Major: Computer Science</u></p>
           <form class= "check" action="/action_page.php">
             <input type="checkbox" name="req"> CS 1110<br>
             <input type="checkbox" name="req"> CS 2110<br>
-            <input type="checkbox" name="req"> CS 2102<br><br>
+            <input type="checkbox" name="req"> CS 2102<br>
+            <input type="checkbox" name="req"> CS 2150<br>
+            <input type="checkbox" name="req"> CS 3330<br>
+            <input type="checkbox" name="req"> CS 4102<br>
+            <input type="checkbox" name="req"> Computing Electives<br>
+            <input type="checkbox" name="req"> Integrative Electives<br><br>
           </form>
         </div>
 	</div>
 
-	<div class="right" style="background-color: green">
+	<div class="right">
 	
 		<div class="select-course" style="float:left;">
-			<p>Selected Courses</p>
+			<p><u>Selected Courses</u></p>
 			<table id="options" border="0">
 				<div class="row" >
-					<td class="event" id="item" draggable="true" ondragstart="drag(event)">CS1</td>
+					<td id="item1" draggable="true" ondragstart="drag(event)" >CS1</td>
 				</div>
 			</table>
 		</div>
@@ -155,39 +170,39 @@
 
 			<div class="main-right">
 				<table id="schedule" align="center">
-					<tr class="sched_row">
+					<tr>
 						<th>1st</th>
 			            <th>2nd</th>
 			            <th>3rd</th>
 			            <th>4th</th>
 			        </tr>
 
-			        <tr class="sched_row">
+			        <tr>
 			        	<th>Fall</th>
 			        	<th>Fall</th>
 			        	<th>Fall</th>
 			        	<th>Fall</th>
 			        </tr>
 
-			        <tr class="sched" ondragover="allowDrop(event)" ondrop="drop(event)">
-			        	<td ondragover="allowDrop(event)" ondrop="drop(event)"></td>
-			        	<td></td>
-			        	<td></td>
-			        	<td></td>
+			        <tr class="drop-row">
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
 			        </tr>
 
-			        <tr class="sched_row">
+			        <tr>
 			        	<th>Spring</th>
 			        	<th>Spring</th>
 			        	<th>Spring</th>
 			        	<th>Spring</th>
 			        </tr>
 
-			        <tr class="sched" ondragover="allowDrop(event)" ondrop="drop(event)">
-			        	<td></td>
-			        	<td></td>
-			        	<td></td>
-			        	<td></td>
+			        <tr class="drop-row">
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
+			        	<td class="sched" ondragover="allowDrop(event)" ondrop="drop(event, this)"></td>
 			        </tr>
 
 			    </table>
@@ -200,12 +215,24 @@
 
 <script>
 
-	function drop(ev){
-		ev.preventDefault();
+	function drop(ev, el){
+		ev.preventDefault();		
 		var data = ev.dataTransfer.getData("text");
-		ev.target.appendChild(document.getElementById(data));
+		el.appendChild(document.getElementById(data));
+		//var parent = ev.target.getElementByClass;
+		
+		/*if (ev.target != event){
+			console.log(parent);
+			parent.appendChild(document.getElementById(data));
+		}*/
 	}
 	function allowDrop(ev) {
+	  /*if(ev.id == sched){
+	  	ev.preventDefault();
+	 }
+	 else{
+
+	 }*/
 	  ev.preventDefault();
 	}
 	function drag(ev) {
@@ -215,17 +242,19 @@
 		var table = document.getElementById("options");
 		var row = table.insertRow(0);
 		var cell = document.createElement("TD");
-
+		var name = document.getElementById("courseID").value;
 		var cell = row.insertCell(0);
 		cell.innerHTML = document.getElementById("courseID").value;
 		cell.classList.add("event");
-		cell.setAttribute("id", "item1");
+		cell.setAttribute("id", name);
         cell.setAttribute("draggable", true);
+        cell.addEventListener("dragstart", drag);
+        /*
         cell.addEventListener( "dragstart" , function drag(ev){
 		    name = document.getElementById(this.id).id;
 		    ev.dataTransfer.setData("text", name);
 		    
-		});
+		});*/
 
 	}
 
