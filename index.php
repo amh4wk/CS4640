@@ -51,13 +51,13 @@
     //     header('Location: index3.php');
     // }
     
-    if (isset($_POST['lname']) && isset($_POST['lpass'])) {
+    if (isset($_GET['lname']) && isset($_GET['lpass'])) {
 
-        $username = $_POST['lname'];
-        $pass = $_POST['lpass'];
+        $username = $_GET['lname'];
+        $pass = $_GET['lpass'];
         //REMEMBER TO CHANGE USERNAME, DB, AND PASSWORD ACCORDINGLY 
         $db = mysqli_connect('localhost:3306', 'cs4640', 'password', 'cs4640');
-        if($_SERVER["REQUEST_METHOD"] == "POST") {
+        if($_SERVER["REQUEST_METHOD"] == "GET") {
             
 
             $sql = "SELECT email FROM accounts WHERE email = '$username'";
@@ -124,7 +124,9 @@
             // $_SESSION['use'] = $email;
             
             $query = "INSERT INTO accounts (email, password, school, major, minor) VALUES ('$username', '$pass', '$school','$major', '$minor')";
+            $requirequery = "INSERT INTO requirements (email) VALUES('$username')";
             mysqli_query($db, $query);
+            mysqli_query($db, $requirequery);
             $_SESSION['email'] = $username;
             $_SESSION['password'] = $pass;
    
@@ -173,7 +175,7 @@
 
 <!-- LOG IN -->
         <div id="login" class="col-md-5" style="float:right;">
-            <form id="returnuser" onsubmit="return validateLoginForm()" method="post">
+            <form id="returnuser" onsubmit="return validateLoginForm()" method="GET">
                 <div class="panel-login">
 
                     <div class="sign-in-title">

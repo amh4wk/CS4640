@@ -1,18 +1,21 @@
 /*Ashley Hoang and Jessica Phan*/
+/*xampp*/
 @media screen and (min-width:377px){
   .left{
+    background-color:#282828;
     float:left;
-    height: 90%;
+    height: 100%;
     width:22%;
     padding-left: 20px;
     padding-top: 20px;
-    background-color: #282828;
+    
+/*#282828*/
 
   }
   .right{
     float:right;
     width: 78%;
-    height: 90%;
+    height: 100%;
     background-color: #404040;
   }
 
