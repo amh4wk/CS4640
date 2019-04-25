@@ -86,14 +86,14 @@
   <div class="main">
     <div class="main_review" style="background-color:white; padding-right:20px; padding-left:20px">
       <div class="write" style="">
-        <form>
+        <form action="localhost:4200">
           <input type="submit" value="Write your own review">
         </form>
       </div>
 
       <div class="reviews">
         <table>
-          
+
         </table>
       </div>
     </div>
