@@ -76,7 +76,7 @@
     <div class="slideshow-container">
       <div class="mySlides" style="width:100%">
         <div class="text">
-          <h1>Social Sciences</h1>
+          <h1>Non-Western Perspective</h1>
         </div>
       </div>
 
@@ -95,11 +95,7 @@
 
         <table cellpadding="10" style="width:100%; border: 1px solid black;">
           <tr style="border: 1px solid black">
-            <th><h3>PSYC 2700: Introduction to Child Psychology<br></h3>I took this class for the easy A, and that's what I got. Study the vocab and know what we learned in lectures and you'll get an A, no tricky concepts and it's all very straightforward, simple stuff. In fact, I often found that the information was very dry and would've liked to learn more about current studies and the science behind how children develop, as opposed to learning different vocab terms for phenomena (i.e. knowing the difference between "cooing" and "babbling" -- not exactly groundbreaking stuff). However, Prof. Vaish was very nice and taught the information in an organized, straightforward manner...although she has a no-electronics policy, which was sometimes annoying.<br><br></th>
-          </tr>
-
-          <tr style="border: 1px solid black">
-            <th><h3>SOC 2052: Sociology of the Family</h3><br>This course is so interesting and relevant! I now find myself applying the things I learned to my own life and relationships. Wilcox assigns a lot of readings and uses them on the exams (only two total). However, as long as you have a general idea of the week's readings, your TA will go over the important aspects in discussion! There aren't a lot of assignments, which is nice (only a eight page final research paper that's graded easily and a partner debate project). Lecture can get a little boring but if you have to miss a class, most of the info can be found in the power points (he posts them on Collab). Overall I highly recommend this class!<br><br></th>
+            <th><h3>ARTH 2861: East Asian Art<br></h3>Easy A and fun material, definitely recommend. Unless other courses with specific topics in East Asian art, this class gives you a nice overview and general idea. Be prepared to memorize artworks, less than 300 in total, 1/3 for midterm and 2/3 for final. Besides that, there are 2 short quizes on identifying artworks and 2 in-class writings about 500 words each. The easy way to do well is to take down whatever she says in class so you don't have to read the textbook at all. Take perfect notes so you can do well on in-class writings, which are open notes but due after only 20 minutes! <br><br></th>
           </tr>
 
         </table>
